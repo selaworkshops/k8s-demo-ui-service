@@ -1,8 +1,10 @@
 var express = require('express');
 var app = express();
 var port = 3000;
+var cors = require('cors');
 var fs = require('fs');
 
+app.use(cors());
 app.use(express.static("."));
 
 app.use(function(req, res, next) {
